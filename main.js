@@ -254,7 +254,9 @@ document.addEventListener('click', async () => {
 window.addEventListener('load', () => {
   // Set initial UI values
   freqInput.value = currentFrequency;
+  freqSlider.value = Math.min(freqSlider.max, currentFrequency);
   tempoInput.value = currentTempo;
+  tempoSlider.value = currentTempo;
   volSlider.value = currentVolume;
   
   // Setup the visualizer
