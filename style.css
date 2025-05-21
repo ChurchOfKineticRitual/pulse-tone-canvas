@@ -18,8 +18,8 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1000px; /* Increased max-width for better desktop experience */
-  aspect-ratio: 16 / 9; /* Fixed 16:9 aspect ratio */
+  max-width: 1000px;
+  aspect-ratio: 16 / 10; /* Adjusted for better proportion */
   background-color: #000000;
   border: 2px solid #333333;
   overflow: hidden;
@@ -47,7 +47,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   height: 40%;
   background-color: rgba(50, 50, 50, 0.1);
 }
@@ -123,7 +123,7 @@ button {
   font-family: 'Press Start 2P', monospace;
   padding: 10px 20px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 5px;
   align-self: center;
   min-width: 150px;
   box-shadow: 0 0 10px rgba(245, 231, 122, 0.3);
@@ -133,6 +133,17 @@ button {
 button:hover {
   background-color: #1a1a1a;
   box-shadow: 0 0 15px rgba(245, 231, 122, 0.6);
+}
+
+#start-stop {
+  margin-top: 10px;
+  padding: 12px 30px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-width: 2px;
+  box-shadow: 0 0 15px rgba(245, 231, 122, 0.5);
+  z-index: 10;
+  position: relative;
 }
 
 .viz-options {
@@ -181,5 +192,3 @@ button:hover {
   flex-direction: column;
   gap: 20px;
 }
-
-/* Removing mobile-specific styles since this is desktop-focused */
