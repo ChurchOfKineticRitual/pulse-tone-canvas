@@ -27,14 +27,24 @@
           <div class="control-row">
             <label for="freq-input">FREQUENCY HZ :</label>
             <input type="number" id="freq-input" min="20" max="20000" value="440">
+            <input type="range" id="freq-slider" min="20" max="2000" value="440" step="1">
           </div>
           <div class="control-row">
             <label for="tempo-input">TEMPO BPM :</label>
             <input type="number" id="tempo-input" min="20" max="300" value="120">
+            <input type="range" id="tempo-slider" min="20" max="300" value="120" step="1">
           </div>
           <div class="control-row">
             <label for="vol-slider">VOLUME :</label>
             <input type="range" id="vol-slider" min="-60" max="0" value="-20" step="1">
+          </div>
+          <div class="control-row">
+            <label>VISUALIZER :</label>
+            <div class="viz-options">
+              <button class="viz-option active" data-mode="basic">WAVE</button>
+              <button class="viz-option" data-mode="mirror">MIRROR</button>
+              <button class="viz-option" data-mode="circle">ORBITAL</button>
+            </div>
           </div>
           <button id="start-stop">START</button>
         </div>
