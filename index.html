@@ -1,26 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pulse-tone-canvas</title>
-    <meta name="description" content="Lovable Generated Project" />
+    <title>Wave-Tone v1.0</title>
+    <meta name="description" content="Audio frequency generator and metronome with waveform visualization" />
     <meta name="author" content="Lovable" />
 
-    <meta property="og:title" content="pulse-tone-canvas" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Google Font - Press Start 2P -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    
+    <!-- Required Libraries -->
+    <script src="https://unpkg.com/p5@latest/lib/p5.min.js"></script>
+    <script src="https://unpkg.com/tone@latest/build/Tone.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="container">
+        <div id="wave-display"></div>
+        <div class="divider"></div>
+        <div id="controls">
+          <div class="control-row">
+            <label for="freq-input">FREQUENCY HZ :</label>
+            <input type="number" id="freq-input" min="20" max="20000" value="440">
+          </div>
+          <div class="control-row">
+            <label for="tempo-input">TEMPO BPM :</label>
+            <input type="number" id="tempo-input" min="20" max="300" value="120">
+          </div>
+          <div class="control-row">
+            <label for="vol-slider">VOLUME :</label>
+            <input type="range" id="vol-slider" min="-60" max="0" value="-20" step="1">
+          </div>
+          <button id="start-stop">START</button>
+        </div>
+      </div>
+      <div id="audio-permission-overlay" class="hidden">
+        <div class="overlay-content">
+          <p>Click to enable audio</p>
+          <button id="enable-audio">ENABLE</button>
+        </div>
+      </div>
+    </div>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script src="main.js"></script>
   </body>
 </html>
