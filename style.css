@@ -19,7 +19,8 @@ body {
 .container {
   width: 100%;
   max-width: 1000px;
-  aspect-ratio: 16 / 10; /* Adjusted for better proportion */
+  height: 80vh; /* Use viewport height instead of aspect ratio */
+  min-height: 600px; /* Ensure minimum height for all content */
   background-color: #000000;
   border: 2px solid #333333;
   overflow: hidden;
@@ -28,7 +29,7 @@ body {
 }
 
 #wave-display {
-  height: 60%;
+  height: 55%; /* Reduced to give more space to controls */
   width: 100%;
   background-color: #000000;
   position: relative;
@@ -48,8 +49,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  height: 40%;
+  height: 45%; /* Increased height for controls */
   background-color: rgba(50, 50, 50, 0.1);
+  overflow-y: auto; /* Allow scrolling if needed */
 }
 
 .control-row {
@@ -136,14 +138,15 @@ button:hover {
 }
 
 #start-stop {
-  margin-top: 10px;
-  padding: 12px 30px;
-  font-size: 16px;
+  margin-top: 15px;
+  padding: 15px 40px;
+  font-size: 18px;
   letter-spacing: 2px;
   border-width: 2px;
-  box-shadow: 0 0 15px rgba(245, 231, 122, 0.5);
+  box-shadow: 0 0 20px rgba(245, 231, 122, 0.8);
   z-index: 10;
   position: relative;
+  min-width: 200px;
 }
 
 .viz-options {
